@@ -13,7 +13,7 @@ func main() {
 	defer cancel()
 
 	mux := http.NewServeMux();
-	mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request, ) {
+	mux.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request, ) {
 		w.WriteHeader(http.StatusOK)
 		w.Write([]byte("ok"))
 	})
